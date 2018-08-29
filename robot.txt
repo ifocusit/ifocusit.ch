@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /js
 Disallow: /css
-Sitemap: https://www.ifocusit.com/sitemap.xml
+Sitemap: https://www.ifocusit.ch/sitemap.xml
