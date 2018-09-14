@@ -28,7 +28,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="container-fluid">
 	<nav>
 		<a class="logo" href="https://ifocusit.ch"></a>
 		<ul>
@@ -37,42 +37,46 @@
 			</li>
 		</ul>
 	</nav>
-	<header>
-		<div id="wrap" class="leadin">
+	<div id="header" class="row">
+		<div class="col-sm-4">
 			<img src="img/focusit.png" />
-			<ul class="text-block">
-				<li style="margin-left: 0em;">
-					<h1>
-						<strong>Focus IT</strong> is a swiss company</h1>
-				</li>
-				<li style="margin-left: 5em;">
-					<h1>which
-						<strong>assists you</strong>
-					</h1>
-				</li>
-				<li style="margin-left: 0em;">
-					<h1>in creating
-						<strong>your</strong> application</h1>.
-				</li>
-				<li style="margin-left: 2em;">
-					<h1>
-						<strong>Web technologies</strong> for
-						<strong>front end</strong>,</h1>
-				</li>
-				<li style="margin-left: 0em;">
-					<h1>and
-						<strong>JEE</strong> for
-						<strong>backend</strong>
-					</h1>
-				</li>
-			</ul>
-			<div id="contactme" class="button-container animated tada">
+		</div>
+		<div class="col-sm-8">
+			<div class="row">
+				<ul class="text-block">
+					<li style="margin-left: 0em;">
+						<h1>
+							<strong>Focus IT</strong> is a swiss company</h1>
+					</li>
+					<li style="margin-left: 5em;">
+						<h1>which
+							<strong>assists you</strong>
+						</h1>
+					</li>
+					<li style="margin-left: 0em;">
+						<h1>in creating
+							<strong>your</strong> application</h1>.
+					</li>
+					<li style="margin-left: 2em;">
+						<h1>
+							<strong>Web technologies</strong> for
+							<strong>front end</strong>,</h1>
+					</li>
+					<li style="margin-left: 0em;">
+						<h1>and
+							<strong>JEE</strong> for
+							<strong>backend</strong>
+						</h1>
+					</li>
+				</ul>
+			</div>
+			<div id="contactme" class="row align-items-end justify-content-end button-container animated tada">
 				<a class="button" href="mailto:julien@ifocusit.ch">CONTACT ME
 					<label>Julien Boz</label>
 				</a>
 			</div>
 		</div>
-	</header>
+	</div>
 	<script type="application/ld+json">
 		{
 			"@context" : "http://schema.org",
@@ -97,7 +101,6 @@
 			},
 			"openingHours": "Mo, Tu, We, Th, Fr 8:00-19:00"
 		}
-
 	</script>
 	<script>
 		(function (i, s, o, g, r, a, m) {
