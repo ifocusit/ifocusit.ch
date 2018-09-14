@@ -17,51 +17,34 @@ a {
   color: #291d1e;
 }
 
-nav {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
+body {
+  min-width: 450px;
 }
 
-nav a.logo {
+#nav a.logo {
   background: url(../img/avatar.png) no-repeat;
   background-size: 60px;
   -webkit-transition: background 0.25s linear;
   -moz-transition: background 0.25s linear;
   transition: background 0.25s linear;
-  /*border-right: #ff0000 solid 2px;*/
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 60px;
-  height: 75px;
 }
 
-nav a.logo:hover {
+#nav a.logo:hover {
   background-color: #ae2323;
 }
 
-nav ul {
-  padding-left: 100px;
-}
-
-nav li {
-  list-style: none;
-  margin: 20px;
-}
-
-nav a:hover {
+#nav a:hover {
   color: #ff0000;
 }
 
-nav a {
+#nav a {
   text-decoration: none;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   transition: all 0.25s linear;
-  padding: 16px;
-  margin: 0 8px;
-  line-height: 55px;
+  padding: 80px;
+  line-height: 5em;
 }
 
 #header {
@@ -76,13 +59,6 @@ nav a {
 b,
 strong {
   font-weight: bold;
-}
-
-#header > div:first-child {
-  text-align: end;
-}
-#header > div:last-child {
-  text-align: start;
 }
 
 #header > div li {
@@ -125,8 +101,4 @@ strong {
   display: block;
   font-size: 0.5em;
   height: 16px;
-}
-
-.button-container {
-  background: url(../img/shadow.png);
 }
