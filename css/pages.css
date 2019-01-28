@@ -1,0 +1,298 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* MENU */
+
+header {
+  height: 100px;
+  background: #34495e;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  padding: 0 40px 0 20px;
+  z-index: 100;
+}
+
+header .container {
+  top: 0;
+  width: 95%;
+}
+
+.logo {
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+}
+
+.menu {
+  float: right;
+  line-height: 100px;
+}
+
+.menu a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu-btn {
+  float: right;
+}
+
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+  color: #3498db;
+}
+
+#menu-chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+@media screen and (max-width: 800px) {
+  .show-menu-btn, .hide-menu-btn {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    z-index: 100;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #menu-chk:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* SCROOLBAR */
+
+::-webkit-scrollbar {
+  background: #7f8c8d;
+  text-align: justify;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #00000070;
+  border-radius: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c3e50;
+  border-radius: 10px;
+}
+
+/* PAGES */
+
+section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+section .container {
+  padding: 120px;
+}
+
+section#presentation {
+  font-size: 16px;
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+section#about {
+  background-color: #0984e3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slide 10s infinite;
+}
+
+section#services {
+  background-color: #0984e3;
+}
+
+section#works {
+  background-color: #636e72;
+}
+
+section#contact {
+  background-color: #a29bfe;
+}
+
+/* PAGE Presentation */
+
+section#presentation .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 300px;
+  background: #eeeeee 50% 0%;
+  background-image: url(../img/swiss.png), url(../img/linen.jpg);
+  background-repeat: no-repeat, repeat;
+  background-position-x: 53%;
+  background-position-y: 94%;
+}
+
+section#presentation > div li {
+  list-style: none;
+  margin: 7px 8px;
+}
+
+section#presentation > div h1 {
+  background: #fff;
+  display: inline;
+  padding: 4px 8px;
+}
+
+@keyframes slide {
+  0% {
+    background-color: #fd79a8;
+  }
+  33% {
+    background-color: #e84393;
+  }
+  67% {
+    background-color: #d63031;
+  }
+}
+
+/* PAGE About */
+
+section#about p {
+  font-size: 20px;
+  padding: 10px;
+  line-height: 24px;
+}
+
+/* PAGE Services */
+
+section#services .container {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%,-50%) rotateX(70deg);
+}
+
+.ripple {
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: ripple 4s linear infinite;
+}
+
+.ripple.r2 {
+  animation-delay: 0.8s;
+}
+
+.ripple.r3 {
+  animation-delay: 1.6s;
+}
+
+.ripple.r4 {
+  animation-delay: 2.4s;
+}
+
+.ripple.r5 {
+  animation-delay: 3.2s;
+}
+
+.ripple.r6 {
+  animation-delay: 4s;
+}
+
+@keyframes ripple {
+  from {
+    border: 4px solid #8e44ad;
+    background: #9b59b670;
+  }
+  to {
+    border: 0px solid #8e44ad;
+    background: #9b59b670;
+    width: 400px;
+    height: 400px;
+    top: 20;
+    opacity: 0;
+  }
+}
+
+section#services p {
+  position: absolute;
+  top: 67%;
+  left: 67%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* COLUMNS */
+
+section .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 830px) {
+  .focus-logo {
+    flex: 0.33;
+  }
+  .focus-logo img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .focus-logo {
+    display: none;
+  }
+}
