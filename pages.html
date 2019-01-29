@@ -41,8 +41,7 @@
   						<h1><strong>Focus IT</strong> is a swiss company</h1>
   					</li>
   					<li style="margin-left: 5em;">
-  						<h1>which <strong>assists you</strong>
-  						</h1>
+  						<h1>which <strong>assists you</strong></h1>
   					</li>
   					<li style="margin-left: 0em;">
   						<h1>in creating <strong>your</strong> application</h1>.
@@ -87,8 +86,55 @@
       </p>
     </section>
     <section id="works">
+      <div class="eyes">
+        <div class="eye">
+          <div class="ball"></div>
+        </div>
+        <div class="eye">
+          <div class="ball"></div>
+        </div>
+      </div>
+
+      <script>
+        var balls = document.getElementsByClassName("ball");
+        document.onmousemove = function() {
+          var x = event.clientX * 100 / window.innerWidth + "%";
+          var y = event.clientY * 100 / window.innerHeight + "%";
+
+          for(var i = 0; i < 2; i++) {
+            balls[i].style.left = x;
+            balls[i].style.top = y;
+            balls[i].style.transform = `translate(-${x},-${y})`;
+          }
+        }
+      </script>
+
     </section>
     <section id="contact">
+      <h1>Contact Us</h1>
+      <div class="border"></div>
+      <form class="contact-form" action="index.html" method="post">
+        <input type="text" class="contact-form-text" placeholder="Your name">
+        <input type="email" class="contact-form-text" placeholder="Your email">
+        <input type="phone" class="contact-form-text" placeholder="Your phone">
+        <textarea class="contact-form-text" placeholder="Your message"></textarea>
+        <input type="submit" class="contact-form-btn" value="Send">
+      </form>
     </section>
+
+    <div id="contact-info">
+      <div class="option">
+        <i class="fas fa-map-marker-alt"></i>
+        <a class="text" href="#contact">Julien Boz</a>
+      </div>
+      <div class="option">
+        <i class="far fa-envelope"></i>
+        <a class="text" href="#contact">julienboz@gmail.com</a>
+      </div>
+      <div class="option">
+        <i class="fas fa-mobile-alt"></i>
+        <a class="text" href="#contact">+41 79 103 71 86</a>
+      </div>
+    </div>
   </body>
 </html>

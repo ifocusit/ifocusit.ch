@@ -75,7 +75,6 @@ header .container {
   .show-menu-btn, .hide-menu-btn {
     display: block;
   }
-
   .menu {
     position: fixed;
     width: 100%;
@@ -108,16 +107,15 @@ header .container {
 ::-webkit-scrollbar {
   background: #7f8c8d;
   text-align: justify;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 10px #00000070;
-  border-radius: 14px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #2c3e50;
-  border-radius: 10px;
 }
 
 /* PAGES */
@@ -133,34 +131,9 @@ section .container {
   padding: 120px;
 }
 
-section#presentation {
-  font-size: 16px;
-  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-section#about {
-  background-color: #0984e3;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: slide 10s infinite;
-}
-
-section#services {
-  background-color: #0984e3;
-}
-
-section#works {
-  background-color: #636e72;
-}
-
-section#contact {
-  background-color: #a29bfe;
-}
-
 /* PAGE Presentation */
 
-section#presentation .container {
+#presentation .container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -174,12 +147,12 @@ section#presentation .container {
   background-position-y: 94%;
 }
 
-section#presentation > div li {
+#presentation > div li {
   list-style: none;
   margin: 7px 8px;
 }
 
-section#presentation > div h1 {
+#presentation > div h1 {
   background: #fff;
   display: inline;
   padding: 4px 8px;
@@ -199,7 +172,12 @@ section#presentation > div h1 {
 
 /* PAGE About */
 
-section#about p {
+#about {
+  background-color: #0984e3;
+  animation: slide 10s infinite;
+}
+
+#about p {
   font-size: 20px;
   padding: 10px;
   line-height: 24px;
@@ -207,7 +185,11 @@ section#about p {
 
 /* PAGE Services */
 
-section#services .container {
+#services {
+  background-color: #0984e3;
+}
+
+#services .container {
   position: absolute;
   top: 20%;
   left: 30%;
@@ -259,7 +241,7 @@ section#services .container {
   }
 }
 
-section#services p {
+#services p {
   position: absolute;
   top: 67%;
   left: 67%;
@@ -295,4 +277,156 @@ section .container {
   .focus-logo {
     display: none;
   }
+}
+
+/* WORKS */
+
+#works {
+  background-color: #34495e;
+}
+
+.eyes {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.eye {
+  width: 240px;
+  height: 120px;
+  background: #fff;
+  display: inline-block;
+  margin: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  border: 15px solid #333;
+}
+
+/* CONTACT */
+
+#contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/montagne.jpg) no-repeat center;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+#contact h1 {
+  text-align: center;
+  color: #ddd;
+}
+
+#contact .border {
+  width: 100px;
+  height: 10px;
+  background: #34495e;
+  margin: 40px auto;
+}
+
+#contact .contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+#contact .contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+#contact .contact-form-text:hover {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+#contact textarea.contact-form-text {
+  resize: none;
+  height: 120px;
+}
+
+#contact .contact-form-btn {
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#contact .contact-form-btn:hover {
+  background: #2980b9;
+}
+
+/* CONTACT INFOS fixe */
+
+#contact-info {
+  position: fixed;
+  top: 40%;
+  z-index: 999999;
+  left: 0;
+}
+
+#contact-info .option {
+  cursor: pointer;
+  position: relative;
+}
+
+
+#contact-info .option i {
+  display: block;
+  width: 60px;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  background: #f1f1f1;
+  color: #b9b9b9;
+  font-size: 20px;
+  transition: 0.6s;
+}
+
+
+#contact-info .option:hover i {
+  color: #3498db;
+}
+
+#contact-info .text {
+  position: absolute;
+  height: 60px;
+  width: 200px;
+  background: #1b1b1b;
+  top: 0;
+  z-index: -1;
+  left: -140px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  transition: 0.6s;
+  text-decoration: none;
+}
+
+
+#contact-info .option:hover .text {
+  left: 60px;
 }
