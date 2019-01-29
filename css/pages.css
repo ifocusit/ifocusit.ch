@@ -1,13 +1,17 @@
-*{
-  margin: 0;
-  padding: 0;
-  font-family: "montserrat", sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
 body,
 html {
   width: 100%;
   height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
 }
 
 /* MENU */
@@ -321,12 +325,12 @@ section .container {
 #contact {
   background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/montagne.jpg) no-repeat center;
   background-size: cover;
-  padding: 120px 0;
 }
 
 #contact h1 {
   text-align: center;
   color: #ddd;
+  padding: 120px 0 0 0;
 }
 
 #contact .border {
@@ -394,7 +398,7 @@ section .container {
 }
 
 
-#contact-info .option i {
+#contact-info .option {
   display: block;
   width: 60px;
   text-align: center;
@@ -402,13 +406,16 @@ section .container {
   line-height: 60px;
   background: #f1f1f1;
   color: #b9b9b9;
-  font-size: 20px;
-  transition: 0.6s;
 }
 
+#contact-info .option i {
+font-size: 20px;
+transition: 0.6s;
+}
 
 #contact-info .option:hover i {
   color: #3498db;
+  transform: rotate(-90deg);
 }
 
 #contact-info .text {
@@ -426,7 +433,22 @@ section .container {
   text-decoration: none;
 }
 
-
 #contact-info .option:hover .text {
   left: 60px;
+}
+
+/* GO TOP btn */
+
+.gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
 }
