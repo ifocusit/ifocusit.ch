@@ -102,6 +102,7 @@ strong {
   -moz-animation-delay: 5s;
   -ms-animation-delay: 5s;
   animation-delay: 5s;
+  padding-right: 50px;
 }
 
 #contactme .button {
@@ -114,12 +115,6 @@ strong {
   color: #fff;
   font-size: 24px;
   text-decoration: none;
-  position: relative;
-  top: -5px;
-  left: -5px;
-  /*-webkit-transition: background 0.5s linear;
-  -moz-transition: background 0.5s linear;
-  transition: background 0.5s linear;*/
 }
 
 #contactme .button span {
