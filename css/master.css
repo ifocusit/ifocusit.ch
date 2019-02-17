@@ -1,10 +1,17 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+}
+
 body,
 h1,
 h2,
 h3,
 h4 {
   font-size: 16px;
-  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -19,41 +26,36 @@ a {
 
 body {
   min-width: 450px;
+  height: 100%;
 }
 
-#nav a.logo {
-  background: url(../img/avatar.png) no-repeat;
-  background-size: 60px;
-  -webkit-transition: background 0.25s linear;
-  -moz-transition: background 0.25s linear;
-  transition: background 0.25s linear;
-  position: absolute;
-}
-
-#nav a.logo:hover {
-  background-color: #ae2323;
+#nav img {
+  width: 60px;
 }
 
 #nav a:hover {
   color: #ff0000;
 }
 
-#nav a {
-  text-decoration: none;
-  -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-  padding: 80px;
-  line-height: 5em;
+#nav {
+  line-height: 8em;
+  /* padding-left: 10em; */
 }
 
-#header {
-  padding: 20px 0;
+#nav a {
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+#content {
   background: #eeeeee 50% 0%;
   background-image: url(../img/swiss.png), url(../img/linen.jpg);
   background-repeat: no-repeat, repeat;
   background-position-x: 53%;
   background-position-y: 94%;
+  /* height: 1000px; */
+  height: 100%;
+  max-height: 500px;
 }
 
 b,
@@ -61,18 +63,48 @@ strong {
   font-weight: bold;
 }
 
-#header > div li {
+#content > div li {
   list-style: none;
   margin: 7px 8px;
 }
 
-#header > div h1 {
+#content > div h1 {
   background: #fff;
   display: inline;
   padding: 4px 8px;
 }
 
-.button {
+#content img {
+  width: 100%;
+  max-width: 400px;
+}
+
+#content .logo,
+#content .text {
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  #content img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  #content {
+    margin-top: 7em;
+    min-height: 670px;
+  }
+}
+
+#contactme {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+#contactme .button {
   display: block;
   background: url(../img/sprite.png) no-repeat;
   background-color: #ff0000;
@@ -90,14 +122,7 @@ strong {
   transition: background 0.5s linear;*/
 }
 
-#contactme {
-  -webkit-animation-delay: 5s;
-  -moz-animation-delay: 5s;
-  -ms-animation-delay: 5s;
-  animation-delay: 5s;
-}
-
-.button label {
+#contactme .button span {
   display: block;
   font-size: 0.5em;
   height: 16px;
