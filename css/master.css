@@ -11,7 +11,7 @@ h2,
 h3,
 h4 {
   font-size: 16px;
-  font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -87,6 +87,7 @@ strong {
 @media (max-width: 768px) {
   #content img {
     width: 100px;
+    display: none;
   }
 }
 
