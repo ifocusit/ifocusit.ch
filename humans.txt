@@ -1,0 +1,11 @@
+
+/* TEAM */
+Developper: Julien Boz
+Site: ifocusit.ch
+Location: Switzerland
+
+/* SITE */
+Last update: 2021-03-25
+Standards: HTML5, CSS3
+Components: bootstrap, jquery
+Software: vscode, chrome
