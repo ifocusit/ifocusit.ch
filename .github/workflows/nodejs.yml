@@ -8,7 +8,7 @@ on:
 
 jobs:
   site:
-    runs-on: self-hosted-runner
+    runs-on: self-hosted
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
       appName: ifocusit
