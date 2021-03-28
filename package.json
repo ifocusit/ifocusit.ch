@@ -1,0 +1,19 @@
+{
+  "name": "ifocusit.ch",
+  "version": "1.0.0",
+  "description": "Site web of the Focus IT swiss company",
+  "main": "index.html",
+  "scripts": {
+    "build": "docker build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifocusit/ifocusit.ch.git"
+  },
+  "author": "Julien Boz",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ifocusit/ifocusit.ch/issues"
+  },
+  "homepage": "https://focusit.ch"
+}

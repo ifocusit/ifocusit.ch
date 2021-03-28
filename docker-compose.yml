@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  traefik:
+    image: traefik
+    command:
+      - "--log.level=info"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedByDefault=false"
+      - '--providers.docker.defaultRule="Host(`{{ .Name }}.localhost`)"'
+      - "--entrypoints.http.address=:80"
+      - "--entrypoints.https.address=:443"
+    ports:
+      - "80:80"
+      - "8090:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # labels:
+    # traefik.enable: 'true'
+    # traefik.http.routers.dashboard.entrypoints: http
+    # traefik.http.routers.dashboard.rule: Host(`dashboard.localhost`)
+    # traefik.http.routers.dashboard-secure.service: api@internal
+
+  ifocusit:
+    build:
+      context: .
+      dockerfile: .deploy/webapp/Dockerfile
+    image: submarine.banan4.com/ifocusit/fees-api:latest
+    environment:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.ifocusit.entrypoints: http
+      traefik.http.services.ifocusit.loadbalancer.server.port: 80
