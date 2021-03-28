@@ -28,5 +28,5 @@ jobs:
         env:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          image: submarine.banan4.com/ifocusit/website-${{ env.appName }}
+          image: submarine.banan4.com/ifocusit/${{ env.appName }}-web
           registry: submarine.banan4.com
