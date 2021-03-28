@@ -4,6 +4,7 @@
 # Allow files and directories
 !.deploy
 !dist
+!docs
 !node_modules
 !package.json
 
