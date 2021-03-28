@@ -27,7 +27,7 @@ services:
     build:
       context: .
       dockerfile: .deploy/webapp/Dockerfile
-    image: submarine.banan4.com/ifocusit/fees-api:latest
+    image: submarine.banan4.com/ifocusit/ifocusit-web:latest
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
     labels:
